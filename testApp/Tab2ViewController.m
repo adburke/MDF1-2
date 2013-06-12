@@ -24,6 +24,7 @@
         // Custom initialization
         self.title = NSLocalizedString(@"Articles", @"Articles");
         self.tabBarItem.image = [UIImage imageNamed:@"second"];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(onClick:)];
     }
     return self;
 }
@@ -44,6 +45,20 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)onClick:(id)sender
+{
+    UIButton *button = (UIButton*)sender;
+    if (button) {
+        if (button.tag == 0 && [self.navigationItem.rightBarButtonItem.title isEqual:@"Edit"]) {
+            [mainTable setEditing:true];
+            [button setTitle:@"Done" forState:UIControlStateNormal];
+        } else {
+            [mainTable setEditing:false];
+            [button setTitle:@"Edit" forState:UIControlStateNormal];
+        }
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

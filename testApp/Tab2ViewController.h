@@ -29,6 +29,6 @@
 @property (nonatomic, weak) id <TableInfoDelegate> delegate;
 
 // Controls the click even of the edit button
--(IBAction)onClick:(id)sender;
+-(void)onClick:(id)sender;
 
 @end
