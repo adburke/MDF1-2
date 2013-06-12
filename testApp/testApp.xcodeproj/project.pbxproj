@@ -33,6 +33,8 @@
 		96DD92B01768E9E2008E2685 /* bg-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DD92AF1768E9E2008E2685 /* bg-orange.png */; };
 		96DD92B21768EB10008E2685 /* bg-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DD92B11768EB10008E2685 /* bg-blue.png */; };
 		96DD92B41768EBAA008E2685 /* bg-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DD92B31768EBAA008E2685 /* bg-green.png */; };
+		96DD92B81768FAFB008E2685 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DD92B61768FAFB008E2685 /* InfoViewController.m */; };
+		96DD92B91768FAFB008E2685 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DD92B71768FAFB008E2685 /* InfoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,9 @@
 		96DD92AF1768E9E2008E2685 /* bg-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-orange.png"; sourceTree = "<group>"; };
 		96DD92B11768EB10008E2685 /* bg-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-blue.png"; sourceTree = "<group>"; };
 		96DD92B31768EBAA008E2685 /* bg-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-green.png"; sourceTree = "<group>"; };
+		96DD92B51768FAFB008E2685 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		96DD92B61768FAFB008E2685 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		96DD92B71768FAFB008E2685 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +126,8 @@
 				96DD929C1768C6CB008E2685 /* Tab1ViewController.m */,
 				96DD92A01768C6D2008E2685 /* Tab2ViewController.h */,
 				96DD92A11768C6D2008E2685 /* Tab2ViewController.m */,
+				96DD92B51768FAFB008E2685 /* InfoViewController.h */,
+				96DD92B61768FAFB008E2685 /* InfoViewController.m */,
 				96DD92961768C68E008E2685 /* Tab3ViewController.h */,
 				96DD92971768C68E008E2685 /* Tab3ViewController.m */,
 				96DD92A51768D974008E2685 /* NavL2Controller.h */,
@@ -129,9 +136,10 @@
 				96DD92AB1768DC30008E2685 /* NavL3Controller.m */,
 				96DD929D1768C6CB008E2685 /* Tab1ViewController.xib */,
 				96DD92A21768C6D2008E2685 /* Tab2ViewController.xib */,
+				96DD92981768C68E008E2685 /* Tab3ViewController.xib */,
 				96DD92AC1768DC30008E2685 /* NavL3Controller.xib */,
 				96DD92A71768D974008E2685 /* NavL2Controller.xib */,
-				96DD92981768C68E008E2685 /* Tab3ViewController.xib */,
+				96DD92B71768FAFB008E2685 /* InfoViewController.xib */,
 				96D3CB0317683AE300729099 /* AppDelegate.h */,
 				96D3CB0417683AE300729099 /* AppDelegate.m */,
 				96D3CAFB17683AE300729099 /* Supporting Files */,
@@ -227,6 +235,7 @@
 				96DD92B01768E9E2008E2685 /* bg-orange.png in Resources */,
 				96DD92B21768EB10008E2685 /* bg-blue.png in Resources */,
 				96DD92B41768EBAA008E2685 /* bg-green.png in Resources */,
+				96DD92B91768FAFB008E2685 /* InfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +253,7 @@
 				96DD92A31768C6D2008E2685 /* Tab2ViewController.m in Sources */,
 				96DD92A81768D974008E2685 /* NavL2Controller.m in Sources */,
 				96DD92AD1768DC30008E2685 /* NavL3Controller.m in Sources */,
+				96DD92B81768FAFB008E2685 /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
