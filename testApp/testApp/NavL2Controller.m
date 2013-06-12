@@ -22,7 +22,7 @@
         if (button.tag == 0) {
             [self.navigationController popViewControllerAnimated:TRUE];
         } else if (button.tag == 1) {
-            NavL3Controller *navL3View = [[NavL3Controller alloc] initWithNibName:@"NavL3Controller" bundle:nil];
+            NavL3Controller* navL3View = [[NavL3Controller alloc] initWithNibName:@"NavL3Controller" bundle:nil];
             if (navL3View) {
                 [self.navigationController pushViewController:navL3View animated:TRUE];
             }

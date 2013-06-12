@@ -18,15 +18,17 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    UIViewController *viewController1 = [[Tab1ViewController alloc] initWithNibName:@"Tab1ViewController" bundle:nil];
-    UIViewController *viewController2 = [[Tab2ViewController alloc] initWithNibName:@"Tab2ViewController" bundle:nil];
-    UIViewController *viewController3 = [[Tab3ViewController alloc] initWithNibName:@"Tab3ViewController" bundle:nil];
+    UIViewController* viewController1 = [[Tab1ViewController alloc] initWithNibName:@"Tab1ViewController" bundle:nil];
+    UIViewController* viewController2 = [[Tab2ViewController alloc] initWithNibName:@"Tab2ViewController" bundle:nil];
+    UIViewController* viewController3 = [[Tab3ViewController alloc] initWithNibName:@"Tab3ViewController" bundle:nil];
 
     
-    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:viewController3];
+    UINavigationController* navController1 = [[UINavigationController alloc] initWithRootViewController:viewController3];
+    UINavigationController* navController2 = [[UINavigationController alloc] initWithRootViewController:viewController2];
+
     
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[viewController1, viewController2, navController];
+    self.tabBarController.viewControllers = @[viewController1, navController2, navController1];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

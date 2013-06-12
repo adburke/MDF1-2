@@ -17,7 +17,7 @@
 
 -(IBAction)onClick:(id)sender
 {
-    NavL2Controller *navL2View = [[NavL2Controller alloc] initWithNibName:@"NavL2Controller" bundle:nil];
+    NavL2Controller* navL2View = [[NavL2Controller alloc] initWithNibName:@"NavL2Controller" bundle:nil];
     if (navL2View) {
         [self.navigationController pushViewController:navL2View animated:TRUE];
     }
