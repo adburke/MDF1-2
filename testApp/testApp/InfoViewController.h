@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tab2ViewController.h"
 
-@interface InfoViewController : UIViewController
+@interface InfoViewController : UIViewController <UITableViewDelegate>
+{
+    IBOutlet UITableView* infoTable;
+}
+
+@property (nonatomic, strong) NSDictionary *linkInfo;
 
 @end

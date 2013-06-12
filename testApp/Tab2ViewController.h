@@ -13,12 +13,12 @@
 
 @optional
 // Required method that will be passed the corresponding dictionary of inf o for the person selected on the row
-- (void)viewSelectedInfo:(NSDictionary*)linkInfo;
+- (void)viewSelectedInfo:(NSDictionary*)cellInfo;
 
 @end
 
 
-@interface Tab2ViewController : UIViewController
+@interface Tab2ViewController : UIViewController <UITableViewDelegate>
 {
     IBOutlet UITableView* mainTable;
     

@@ -32,7 +32,7 @@
 - (void)viewDidLoad
 {
     linkArray = [[NSMutableArray alloc] initWithObjects:
-                 @{@"Title":@"Article 1", @"url":@"www.google.com"},
+                 @{@"Title":@"Article 1", @"Author":@"Author 1", @"url":@"www.google.com"},
                  @{@"Title":@"Article 2", @"url":@"www.google.com"},
                  @{@"Title":@"Article 3", @"url":@"www.google.com"},
                  nil];
@@ -54,6 +54,7 @@
         if ([self.navigationItem.rightBarButtonItem.title isEqual:@"Edit"]) {
             [mainTable setEditing:true];
             self.navigationItem.rightBarButtonItem.title = @"Done";
+            
         } else {
             [mainTable setEditing:false];
             self.navigationItem.rightBarButtonItem.title = @"Edit";
@@ -90,7 +91,7 @@
         // This is the code for a base table view cell
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];    
     }
-    // Sets both custom label text boxes with the correct data
+    // Sets label text boxes with the correct data
     cell.textLabel.text =[[linkArray objectAtIndex: indexPath.row] objectForKey:@"Title"];
     
     return cell;
