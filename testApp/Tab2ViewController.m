@@ -51,12 +51,12 @@
 {
     UIButton *button = (UIButton*)sender;
     if (button) {
-        if (button.tag == 0 && [self.navigationItem.rightBarButtonItem.title isEqual:@"Edit"]) {
+        if ([self.navigationItem.rightBarButtonItem.title isEqual:@"Edit"]) {
             [mainTable setEditing:true];
-            [button setTitle:@"Done" forState:UIControlStateNormal];
+            self.navigationItem.rightBarButtonItem.title = @"Done";
         } else {
             [mainTable setEditing:false];
-            [button setTitle:@"Edit" forState:UIControlStateNormal];
+            self.navigationItem.rightBarButtonItem.title = @"Edit";
         }
     }
 }
