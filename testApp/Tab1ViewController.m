@@ -7,6 +7,7 @@
 //
 
 #import "Tab1ViewController.h"
+#import "CustomObject.h"
 
 @interface Tab1ViewController ()
 
@@ -29,6 +30,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    CustomObject *custom = [[CustomObject alloc] init];
+    nameInfo.text = [NSString stringWithFormat:@"        %@ %@", custom.name[0], custom.name[1] ];
+    dateInfo.text = [NSString stringWithFormat:@"    %@", custom.date];
+    courseInfo.text = [NSString stringWithFormat:@"    %@", custom.course];
+    projectInfo.text = [NSString stringWithFormat:@"    %@", custom.project];
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface Tab1ViewController : UIViewController
+{
+    IBOutlet UILabel *nameInfo;
+    IBOutlet UILabel *dateInfo;
+    IBOutlet UILabel *courseInfo;
+    IBOutlet UILabel *projectInfo;
+}
 
 @end
