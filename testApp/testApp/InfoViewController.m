@@ -8,7 +8,7 @@
 
 #import "InfoViewController.h"
 
-@interface InfoViewController ()
+@interface InfoViewController () 
 
 @end
 
@@ -29,6 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    myWebView.delegate = self;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,7 +82,7 @@
 {
     static NSString *cellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
@@ -102,5 +104,22 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSError* error  = NULL;
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *string = cell.textLabel.text;
+    
+    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:@"\\b(Url:)" options:NSRegularExpressionCaseInsensitive error:&error];
+    
+    NSInteger result = [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, [string length])];
+    
+    if (result == 1) {
+        [myWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[linkInfo objectForKey:@"Url"]]]];
+    }
+    
+    
+}
 
 @end

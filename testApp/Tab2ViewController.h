@@ -20,9 +20,9 @@
 
 @interface Tab2ViewController : UIViewController <UITableViewDelegate>
 {
-    IBOutlet UITableView* mainTable;
+    IBOutlet UITableView *mainTable;
     
-    NSMutableArray* linkArray;
+    NSMutableArray *linkArray;
 }
 
 // Property id of the delegate

@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Tab2ViewController.h"
 
-@interface InfoViewController : UIViewController <UITableViewDelegate>
+@interface InfoViewController : UIViewController <UITableViewDelegate, UIWebViewDelegate>
 {
-    IBOutlet UITableView* infoTable;
+    IBOutlet UITableView *infoTable;
+    
+    IBOutlet UIWebView *myWebView;
+    
 }
 
 @property (nonatomic, strong) NSDictionary *linkInfo;
