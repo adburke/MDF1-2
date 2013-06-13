@@ -32,9 +32,9 @@
 - (void)viewDidLoad
 {
     linkArray = [[NSMutableArray alloc] initWithObjects:
-                 @{@"Title":@"Article 1", @"Author":@"Author 1", @"url":@"www.google.com"},
-                 @{@"Title":@"Article 2", @"url":@"www.google.com"},
-                 @{@"Title":@"Article 3", @"url":@"www.google.com"},
+                 @{@"Title":@"Mathematics for 3D Game Programming and Computer Graphics", @"Author":@"Lengyel, Eric", @"Published":@"2012", @"Url":@"http://search.ebscohost.com.oclc.fullsail.edu:81/login.aspx?direct=true&db=nlebk&AN=365853&site=ehost-live"},
+                 @{@"Title":@"Mathematics for 3D Game Programming and Computer Graphics", @"Author":@"Lengyel, Eric", @"Published":@"2012", @"Url":@"http://search.ebscohost.com.oclc.fullsail.edu:81/login.aspx?direct=true&db=nlebk&AN=365853&site=ehost-live"},
+                 @{@"Title":@"Mathematics for 3D Game Programming and Computer Graphics", @"Author":@"Lengyel, Eric", @"Published":@"2012", @"Url":@"http://search.ebscohost.com.oclc.fullsail.edu:81/login.aspx?direct=true&db=nlebk&AN=365853&site=ehost-live"},
                  nil];
     
     [super viewDidLoad];
@@ -107,7 +107,7 @@
     if (infoView) {
         self.delegate = (id)infoView;
         [delegate viewSelectedInfo:[linkArray objectAtIndex:indexPath.row]];
-        [self presentViewController:infoView animated:TRUE completion:nil];
+        [self.navigationController pushViewController:infoView animated:TRUE];
     }
     
     

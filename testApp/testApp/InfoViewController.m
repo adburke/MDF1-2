@@ -42,7 +42,7 @@
     NSLog(@"viewPersonInfo Fired");
     // Set local dictionary to the passed in dictionary
     linkInfo = cellInfo;
-    NSLog(@"name=%@ age=%@ hair=%@ location=%@", [linkInfo objectForKey:@"name"],[linkInfo objectForKey:@"age"],[linkInfo objectForKey:@"hair"],[linkInfo objectForKey:@"location"] );
+    NSLog(@"Title=%@ Author=%@ Published=%@ Url=%@", [linkInfo objectForKey:@"Title"],[linkInfo objectForKey:@"Author"],[linkInfo objectForKey:@"Published"],[linkInfo objectForKey:@"Url"] );
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView
@@ -89,11 +89,11 @@
     if (indexPath.section == 0) {
         cell.textLabel.text = [linkInfo objectForKey:@"Title"];
     } else if (indexPath.section == 1 && indexPath.row == 0) {
-        cell.textLabel.text = [NSString stringWithFormat:@"Age: %@" ,[linkInfo objectForKey:@"age"]];
+        cell.textLabel.text = [NSString stringWithFormat:@"Author: %@" ,[linkInfo objectForKey:@"Author"]];
     } else if (indexPath.section == 1 && indexPath.row == 1) {
-        cell.textLabel.text = [NSString stringWithFormat:@"Hair Color: %@" ,[linkInfo objectForKey:@"hair"]];
+        cell.textLabel.text = [NSString stringWithFormat:@"Published Year: %@" ,[linkInfo objectForKey:@"Published"]];
     } else if (indexPath.section == 1 && indexPath.row == 2) {
-        cell.textLabel.text = [NSString stringWithFormat:@"Location: %@" ,[linkInfo objectForKey:@"location"]];
+        cell.textLabel.text = [NSString stringWithFormat:@"Url: %@" ,[linkInfo objectForKey:@"Url"]];
     }
     
     return cell;
