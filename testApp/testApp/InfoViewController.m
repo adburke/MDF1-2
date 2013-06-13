@@ -33,6 +33,15 @@
 
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    if ( [myWebView isLoading] ) {
+        [myWebView stopLoading];
+    }
+    myWebView.delegate = nil;    // disconnect the delegate as the webview is hidden
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -126,6 +135,18 @@
     }
     
     
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    // starting the load, show the activity indicator in the status bar
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    // finished loading, hide the activity indicator in the status bar
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 @end
