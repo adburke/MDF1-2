@@ -91,6 +91,8 @@
     if (indexPath.section == 0) {
         cell.textLabel.text = [linkInfo objectForKey:@"Title"];
         cell.userInteractionEnabled = NO;
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     } else if (indexPath.section == 1 && indexPath.row == 0) {
         cell.textLabel.text = [NSString stringWithFormat:@"Author: %@" ,[linkInfo objectForKey:@"Author"]];
         cell.userInteractionEnabled = NO;

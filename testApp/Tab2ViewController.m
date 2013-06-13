@@ -33,8 +33,8 @@
 {
     linkArray = [[NSMutableArray alloc] initWithObjects:
                  @{@"Title":@"Mathematics for 3D Game Programming and Computer Graphics", @"Author":@"Lengyel, Eric", @"Published":@"2012", @"Url":@"http://search.ebscohost.com.oclc.fullsail.edu:81/login.aspx?direct=true&db=nlebk&AN=365853&site=ehost-live"},
-                 @{@"Title":@"Mathematics for 3D Game Programming and Computer Graphics", @"Author":@"Lengyel, Eric", @"Published":@"2012", @"Url":@"http://search.ebscohost.com.oclc.fullsail.edu:81/login.aspx?direct=true&db=nlebk&AN=365853&site=ehost-live"},
-                 @{@"Title":@"Mathematics for 3D Game Programming and Computer Graphics", @"Author":@"Lengyel, Eric", @"Published":@"2012", @"Url":@"http://search.ebscohost.com.oclc.fullsail.edu:81/login.aspx?direct=true&db=nlebk&AN=365853&site=ehost-live"},
+                 @{@"Title":@"Advanced Design Approaches to Emerging Software Systems : Principles, Methodologies, and Tools", @"Author":@"Li, Yang", @"Published":@"2012", @"Url":@"http://search.ebscohost.com.oclc.fullsail.edu:81/login.aspx?direct=true&db=nlebk&AN=380102&site=ehost-live"},
+                 @{@"Title":@"Multidimensional Signal, Image, and Video Processing and Coding", @"Author":@"Woods, John W.", @"Published":@"2012", @"Url":@"http://search.ebscohost.com.oclc.fullsail.edu:81/login.aspx?direct=true&db=nlebk&AN=369931&site=ehost-live"},
                  nil];
     
     [super viewDidLoad];
@@ -93,6 +93,8 @@
     }
     // Sets label text boxes with the correct data
     cell.textLabel.text =[[linkArray objectAtIndex: indexPath.row] objectForKey:@"Title"];
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
     return cell;
 }
@@ -100,7 +102,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"row=%d title=%@", indexPath.row, [[linkArray objectAtIndex:indexPath.row] objectForKey:@"Title"]);
-    
     // Allocates and sets up the delegate for InfoViewController
     // Passes the selected row dictionary of personal data to the InfoViewController
     InfoViewController *infoView = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
