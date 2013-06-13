@@ -94,9 +94,13 @@
         cell.textLabel.text = [NSString stringWithFormat:@"Published Year: %@" ,[linkInfo objectForKey:@"Published"]];
     } else if (indexPath.section == 1 && indexPath.row == 2) {
         cell.textLabel.text = [NSString stringWithFormat:@"Url: %@" ,[linkInfo objectForKey:@"Url"]];
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     }
+    
     
     return cell;
 }
+
 
 @end
