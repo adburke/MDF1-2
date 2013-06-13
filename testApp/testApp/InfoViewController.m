@@ -90,14 +90,18 @@
     // Used section number and row to put the correct values in the correct section and row
     if (indexPath.section == 0) {
         cell.textLabel.text = [linkInfo objectForKey:@"Title"];
+        cell.userInteractionEnabled = NO;
     } else if (indexPath.section == 1 && indexPath.row == 0) {
         cell.textLabel.text = [NSString stringWithFormat:@"Author: %@" ,[linkInfo objectForKey:@"Author"]];
+        cell.userInteractionEnabled = NO;
     } else if (indexPath.section == 1 && indexPath.row == 1) {
         cell.textLabel.text = [NSString stringWithFormat:@"Published Year: %@" ,[linkInfo objectForKey:@"Published"]];
+        cell.userInteractionEnabled = NO;
     } else if (indexPath.section == 1 && indexPath.row == 2) {
         cell.textLabel.text = [NSString stringWithFormat:@"Url: %@" ,[linkInfo objectForKey:@"Url"]];
         cell.textLabel.numberOfLines = 0;
         cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     
